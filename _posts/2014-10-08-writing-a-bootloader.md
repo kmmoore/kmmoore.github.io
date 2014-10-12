@@ -6,7 +6,7 @@ category: articles
 tags: [mosquitos, operating system]
 comments: true
 image:
-    feature: pasayten-1.jpg
+  feature: sierras-7.jpg
 ---
 
 <section id="table-of-contents" class="toc">
