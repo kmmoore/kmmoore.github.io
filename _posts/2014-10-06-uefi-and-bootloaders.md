@@ -40,7 +40,7 @@ When you turn on the power supply in your computer and the motherboard receives 
 
 3.  The motherboard tells the CPU to start executing firmware (which is stored on some sort of non-volatile storage on the motherboard, and is programmed when the motherboard is shipped (although it can usually be upgraded later)). For older computers, this firmware was usually [BIOS](http://en.wikipedia.org/wiki/BIOS), modern computers mostly use [UEFI](http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface) (which usually has BIOS backwards compatibility built in). More on the differences between BIOS and UEFI below.
 
-4.  The motherboard firmware reads a piece of code called the "bootloader" executable from a hard drive[^5] and executes that code (more on how exactly it finds the firmware below). The bootloader is responsible for configuring whatever hardware is necessary, loading the kernel (and it's supporting files) into memory from disk, and then transferring control to the kernel to continue the boot process. More on this below.
+4.  The motherboard firmware reads a piece of code called the "bootloader" executable from a hard drive[^2] and executes that code (more on how exactly it finds the firmware below). The bootloader is responsible for configuring whatever hardware is necessary, loading the kernel (and it's supporting files) into memory from disk, and then transferring control to the kernel to continue the boot process. More on this below.
 
  
 
