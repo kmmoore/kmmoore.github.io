@@ -1,43 +1,20 @@
+# Site wide configuration
+
 title:            MosquitOS
-tagline:          "A tiny, annoying operating system"
-description:      Describe your website.
-url:              http://kmmoore.github.io/
+locale:           en_US
+url:              http://localhost:4000
 
 
-# Owner/author information
-owner:
-  name:           Kyle Moore
-  avatar:         avatar.png
-  bio:            "A recent graduate of Stanford University who spends his time rock climbing, cycling, and writing horrible operating systems."
-  email:          kmmoore@alumni.stanford.edu
-  twitter:        ""
-  github:         kmmoore
-  instagram:      ""
-  dribbble:       ""
-  disqus:         mosquitos
-  location:       "Palo Alto, CA"
-  # Plug in your disqus shortname!
+# Jekyll configuration
 
-tools:
-  standards:      "HTML, SCSS, Jekyll"
-  software:       "git"
-
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: About
-    url: /about
-  - title: Resources
-    url: /about
-  - title: Github
-    url: https://github.com/kmmoore/mosquitos
-    external: true
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-future:      true
-highlighter: pygments
+permalink:   /:categories/:title/
 markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
 
 kramdown:
   auto_ids: true
@@ -46,18 +23,33 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
-  coderay:
-    coderay_line_numbers:
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
 
-sass:
-    style: :compressed
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
+# Site owner
+owner:
+  name: Kyle Moore
+  avatar: bio-photo.jpg
+  bio: "A recent graduate of Stanford University who enjoys rock climbing, cycling, and writing terrible operating systems."
+  email: kmmoore@alumni.stanford.edu
+  disqus-shortname: mosquitos
+  twitter: #username
+  facebook: #username
+  google:
+    plus:
+    analytics: 
+    verify: 
+    ad-client: 
+    ad-slot: 
+  bing-verify: 
+  github: kmmoore
+  stackoverflow: http://stackoverflow.com/users/100112/kyle
+  linkedin: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
