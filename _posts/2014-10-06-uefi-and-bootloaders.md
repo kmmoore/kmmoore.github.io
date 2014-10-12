@@ -47,7 +47,11 @@ When you turn on the power supply in your computer and the motherboard receives 
 BIOS vs UEFI
 --------------
 
-In the bad old days when BIOS was written, computers were simple, hard drives were small, and bootloaders were small.
+In the bad old days when BIOS was written, computers were simple, hard drives were small, and bootloaders were small. Because of this, and to keep things simple, BIOS required the bootloader to be stored in the very first sector of the boot medium (e.g., a hard drive, floppy, or CD). This first sector was called the [Master Boot Record (MBR)](http://en.wikipedia.org/wiki/Master_boot_record). Typical hard drive sectors are only 512 bytes, which is not a lot of space for the bootloader. Consequently, most moder bootloaders are multi-stage -- they have a simple bootloader in the MBR that loads a more complex one from a fixed location in a partition, which then loads the operating system.
+
+ 
+
+When UEFI was developed, the designers decided to remove the 512 byte limit. UEFI based bootloaders are instead stored in a regular file (with a special name) on a FAT-16 formatted partition. While this makes the UEFI firmware much more complicated than BIOS (since it now has to know about filesystems and partion maps and such), it makes writing a bootloader much easier.
  
 
  
