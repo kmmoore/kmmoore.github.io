@@ -49,8 +49,13 @@ done with `sudo apt-get install <package-name>`):
 -   `openssh-server` — Allows me to SSH into the VM.
 -   `binutils` — Contains tools for linking, creating, and exploring binaries.
 -   `gcc` — The compiler I use to compile both the bootloader and the kernel/drivers, you could probably do the same things with `clang` if you wanted to.
--   `gnu-efi` — Headers and libraries used to to compile EFI applications (for example, the bootloader).
+-   `gnu-efi` — Headers and libraries used to to compile UEFI applications (for example, the bootloader).
 -   `pkg-config` and `libfuse-dev` — Requirements for `tup`.
--   `tup` - A build system (similar to `make`) that I use to build both the kernel and boot loader (more on this later).
+-   `tup` - A build system (similar to `make`) that I use to build both the kernel and boot loader (more on this next).
 
-Next up, we’ll write and compile an EFI application and use it to boot a virtual machine.
+
+To The Build System!
+--------------------
+
+Next up, we’ll set up `tup` and get everything ready to compile our first UEFI application. [Onward!]({% post_url 2014-10-08-build-systems %})
+

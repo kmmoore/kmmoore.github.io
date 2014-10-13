@@ -46,9 +46,9 @@ Articles
 
 1.  [Introduction]({% post_url 2014-10-05-introduction %})
 2.  [UEFI and Bootloaders]({% post_url 2014-10-06-uefi-and-bootloaders %})
-3.  [Setting Up a Build Environment]({% post_url 2014-10-07-development-environment %})
-4.  [Writing a Real Bootloader]({% post_url 2014-10-08-writing-a-bootloader %})
-5.  Build Systems
+3.  [Setting Up a Development Environment]({% post_url 2014-10-07-development-environment %})
+4.  [Build Systems]({% post_url 2014-10-08-build-systems %})
+5.  [Writing a UEFI Application]({% post_url 2014-10-09-writing-a-uefi-application %})
 6.  A Basic Kernel
 7.  Kernel Debugging
 8.  Dynamic Memory (And Life Without libc)
