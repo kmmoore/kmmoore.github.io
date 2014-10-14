@@ -6,7 +6,7 @@ category: articles
 tags: [mosquitos, operating system, uefi]
 comments: true
 image:
-  feature: sierras-8.jpg
+  feature: sierras-9.jpg
 ---
 
 <section id="table-of-contents" class="toc">
