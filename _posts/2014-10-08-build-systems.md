@@ -64,32 +64,30 @@ I won't try to explain the entire syntax of `tup`. The [examples](gittup.org/tup
 
 This file sets defines some common variables and macros for the whole project.
 
-{% gist kmmoore/cc0b1d828c80ab716cf0 Tuprules.tup%23Root %}
+{% gist kmmoore/cc0b1d828c80ab716cf0 Tuprules.tup%23Root.mk %}
 
 
 ### Root Tupfile
 
 
-{% gist kmmoore/cc0b1d828c80ab716cf0 Tupfile%23Root %}
+{% gist kmmoore/cc0b1d828c80ab716cf0 Tupfile%23Root.mk %}
 
 
 ### EFI Application Tuprules.tup
 
-**CHECK `$(CC) -print-libgcc-file-name`**
-
-{% gist kmmoore/cc0b1d828c80ab716cf0 Tuprules.tup%23EFI %}
+{% gist kmmoore/cc0b1d828c80ab716cf0 Tuprules.tup%23EFI.mk %}
 
 
 ### EFI Application Tupfile
 
-{% gist kmmoore/cc0b1d828c80ab716cf0 Tupfile%23EFI %}
+{% gist kmmoore/cc0b1d828c80ab716cf0 Tupfile%23EFI.mk %}
 
 
 ### Submodule Tupfile
 
 This is a `Tupfile` that I place in any subdirectory that contains code I want to compile into the main project. If you want, you can add/override any of the CFLAGS at the top of the file and it will just apply to the files in that directory. Or you can create another `Tuprules.tup` file in that subdirectory and it will apply to all files in that subdirectory and any nested subdirectories.
 
-{% gist kmmoore/cc0b1d828c80ab716cf0 Tupfile%23Submodule %}
+{% gist kmmoore/cc0b1d828c80ab716cf0 Tupfile%23Submodule.mk %}
 
  
 
