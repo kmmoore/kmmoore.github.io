@@ -49,11 +49,12 @@ Articles
 3.  [Setting Up a Development Environment]({% post_url 2014-10-07-development-environment %})
 4.  [Build Systems]({% post_url 2014-10-08-build-systems %})
 5.  [Writing a UEFI Application]({% post_url 2014-10-09-writing-a-uefi-application %})
-6.  A Basic Kernel
-7.  Kernel Debugging
-8.  Dynamic Memory (And Life Without libc)
-9.  Interrupts
-10. Pre-emptive Multithreading
-11. ACPICA
-12. PCI
-13. SATA
+6.  [Writing a Bootloader]({% post_url 2014-10-10-writing-a-bootloader %})
+7.  A Basic Kernel
+8.  Kernel Debugging
+9.  Dynamic Memory (And Life Without libc)
+10. Interrupts
+11. Pre-emptive Multithreading
+12. ACPICA
+13. PCI
+14. SATA

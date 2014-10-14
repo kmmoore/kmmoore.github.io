@@ -34,11 +34,8 @@ Overview of the Boot Process:
 When you turn on the power supply in your computer and the motherboard receives power (**I don't like how this sounds**), a couple of things happen:
 
 1.  The motherboard executes what is called the [Power On Self-Test (POST)](http://en.wikipedia.org/wiki/Power-on_self-test). This performs a quick diagnostic test of hardware in the computer (such as the CPUs, firmware, and RAM) and stops the power-on process if it detects and hardware problems. The beep made by many computers shortly after they start up is the motherboard indicating that the POST has succeeded.
-
 2.  The motherboard powers up the first CPU. At this point, the CPU is in what's called [Real Mode](http://en.wikipedia.org/wiki/Real_mode) and is emulating an Intel 8086 chip from 1976[^1].
-
 3.  The motherboard tells the CPU to start executing firmware (which is stored on some sort of non-volatile storage on the motherboard, and is programmed when the motherboard is shipped (although it can usually be upgraded later)). For older computers, this firmware was usually the [Basic Input/Output System (BIOS)](http://en.wikipedia.org/wiki/BIOS), modern computers mostly use the [Unified Extensible Firmware Interface (UEFI)](http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface) (which usually has BIOS backwards compatibility built in). More on the differences between BIOS and UEFI below.
-
 4.  The motherboard firmware reads a piece of code called the "bootloader" executable from a hard drive[^2] and executes that code (more on how exactly it finds the firmware below). The bootloader is responsible for configuring whatever hardware is necessary, loading the kernel (and it's supporting files) into memory from disk, and then transferring control to the kernel to continue the boot process. More on this below.
 
 
@@ -49,7 +46,7 @@ In the bad old days when BIOS was written, computers were simple, hard drives we
 
  
 
-When UEFI was developed (primarily by Intel **VERIFY**), the designers decided to remove the 512 byte limit. UEFI based bootloaders are instead stored in a regular file (with a special name) on a FAT-16 formatted partition[^3]. While this makes the UEFI firmware much more complicated than BIOS (since it now has to know about filesystems and partition maps and such), it makes writing a bootloader much easier.
+When EFI (and then UEFI, which is a successor to EFI) was developed (primarily by Intel **VERIFY**), the designers decided to remove the 512 byte limit. UEFI based bootloaders are instead stored in a regular file (with a special name) on a FAT formatted partition[^3]. While this makes the UEFI firmware much more complicated than BIOS (since it now has to know about filesystems and partition maps and such), it makes writing a bootloader much easier.
 
  
 
@@ -85,4 +82,4 @@ Next up, we have a post about setting up a development environment (as this took
 
 [^2]: As a result of this, the motherboard firmware must have some knowledge of hard drive partition schemes and filesystem formats built into it. This is why for some computer/OS combinations (Linux does this frequently) you have a separate partition for the boot loader (which must be a filesystem type supported by the motherboard) and for the main operating system/user filesystem (which can be something much more modern and fancy).
 
-[^3]: Other filesystems can be supported, but FAT-16 is the only one mandated by the specification. **VERIFY**
+[^3]: Other filesystems can be supported, but FAT-32, FAT-16, and FAT-12 are the only formats mandated by the specification. **VERIFY**
