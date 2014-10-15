@@ -21,7 +21,7 @@ image:
 
  
 
-For simple projects, it's easy enough to type `gcc -o kernel kernel.c` at the command line, but when you're compiling dozens of files with gobs of compiler and linker options, it helps to have some automation. Probably the most widely used tool for automating C project builds is [Make](http://www.gnu.org/software/make/). `Make` is decently old, and has a bit of an odd syntax, but it works, it's used all over the place, and the syntax really isn't too bad once you get used to it. (I'm not sure if the description of `Make` works I would get rid of it because I assume someone already reading this is familiar with make)
+For simple projects, it's easy enough to type `gcc -o kernel kernel.c` at the command line, but when you're compiling dozens of files with gobs of compiler and linker options, it helps to have some automation. Probably the most widely used tool for automating C project builds is [Make](http://www.gnu.org/software/make/). I used `Make` for a while, but I've since switched to [tup](http://gittup.org/tup/), and have been much happier.
 
  
 
@@ -44,7 +44,7 @@ The final straw for me was when I was working on including the ACPICA library (a
 Life After Make
 ---------------
 
-After struggling with a few other systems (that appeared to offer few benefits over `make`), I stumbled upon [tup](gittup.org/tup/). For me `tup` has a few distinct advantages:
+After struggling with a few other systems (that appeared to offer few benefits over `make`), I stumbled upon [tup](http://gittup.org/tup/). For me `tup` has a few distinct advantages:
 
 - It works recursively by default. When you run `tup` from any directory in your project, it automatically scans every subdirectory in the project and executes in every directory with a `Tupfile`. This means you have to have one `Tupfile` per code directory, but I've found that this is hardly difficult, and it gives you the ability to easily change the compilation options for every submodule in your project.
 - `tup` keeps track of all the files opened by every command executed in your `Tupfile` to automatically determine dependencies. For example, a line like `hello.c |> gcc -o %o %f |> hello` means take the file `hello.c`, and invoke the command `gcc -o hello hello.c` to produce the file `hello`. If `hello.c` includes `hello.h`, `gcc` will open `hello.h` during compilation, `tup` will "see" this, and it will implicitly determine that `hello.c` depends on `hello.h`. If you subsequently make a change to `hello.h`, `tup` will automatically recompile all files that depend on it.

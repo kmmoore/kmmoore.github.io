@@ -38,7 +38,7 @@ Since many of the first articles were written much after the fact, they don’t 
 Prerequisites
 -------------
 
-The articles assume you have a good working understanding of the C language, and some basic experience with x64 assembly. Additionally, the development is all done on the Linux command line, so experience with this is useful. For overviews of all of these topics, see the [Resources](/resources/) page.
+The articles assume you have a good working understanding of the C language, and some basic experience with x64 assembly. Additionally, the development is all done on the Linux command line, so experience with this is useful.
 
 
 Articles
