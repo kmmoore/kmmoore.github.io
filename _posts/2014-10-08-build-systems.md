@@ -21,7 +21,7 @@ image:
 
  
 
-For simple projects, it's easy enough to type `gcc -o kernel kernel.c` at the command line, but when you're compiling dozens of files with gobs of compiler and linker options, it helps to have some automation. Probably the most widely used tool for automating C project builds is [Make](http://www.gnu.org/software/make/). `Make` is decently old, and has a bit of an odd syntax, but it works, it's used all over the place, and the syntax really isn't too bad once you get used to it.
+For simple projects, it's easy enough to type `gcc -o kernel kernel.c` at the command line, but when you're compiling dozens of files with gobs of compiler and linker options, it helps to have some automation. Probably the most widely used tool for automating C project builds is [Make](http://www.gnu.org/software/make/). `Make` is decently old, and has a bit of an odd syntax, but it works, it's used all over the place, and the syntax really isn't too bad once you get used to it. (I'm not sure if the description of `Make` works I would get rid of it because I assume someone already reading this is familiar with make)
 
  
 

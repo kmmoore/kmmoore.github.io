@@ -52,14 +52,14 @@ When EFI (and then UEFI, which is a successor to EFI) was developed (primarily b
 
  
 
-While the missing MBR dependence is the first noticeable difference, UEFI is really a completely different beast than BIOS. UEFI provides what is effectively a mini-operating system for your bootloader. UEFI has the concept of "applications," which are simply executable binaries that are linked against the UEFI libraries. UEFI applications have the ability to use all of the services provided by UEFI, which include things like filesystem access, text I/O, basic graphics, and much more -- the [UEFI Specification](http://www.uefi.org/specifications), specifically the part on "Boot Services" provides a comprehensive list. We'll talk more about this when we write a UEFI application.
+While the missing MBR dependence is the first noticeable difference, UEFI is a completely different beast than BIOS. UEFI provides what is effectively a mini-operating system for your bootloader. UEFI has the concept of "applications," which are simply executable binaries that are linked against the UEFI libraries. UEFI applications have the ability to use all of the services provided by UEFI, which include things like filesystem access, text I/O, basic graphics, and much more -- the [UEFI Specification](http://www.uefi.org/specifications), specifically the part on "Boot Services" provides a comprehensive list. We'll talk more about this when we write a UEFI application.
 
  
 
 The Bootloader
 --------------
 
-Because UEFI provides so many nice features, it doesn't involve an MBR, and it's clearly the direction the world is moving (almost all new motherboards support UEFI now, and BIOS is going the way of the dodos), I decided to use a UEFI bootloader for MosquitOS -- and not support BIOS. While there are a number of existing [UEFI bootloaders](https://wiki.ubuntu.com/EFIBootLoaders) (e.g., [Gummiboot](http://freedesktop.org/wiki/Software/gummiboot/), [Grub 2](http://www.gnu.org/software/grub/), and [ELILO](http://sourceforge.net/projects/elilo/)), since my main goal with MosquitOS is to write as much as possible from scratch, I decided to write my own bootloader.
+Because UEFI provides so many nice features (I don't like the word nice here), it doesn't involve an MBR, and it's clearly the direction the world is moving (almost all new motherboards support UEFI now, and BIOS is going the way of the dodos), I decided to use a UEFI bootloader for MosquitOS -- and not support BIOS. While there are a number of existing [UEFI bootloaders](https://wiki.ubuntu.com/EFIBootLoaders) (e.g., [Gummiboot](http://freedesktop.org/wiki/Software/gummiboot/), [Grub 2](http://www.gnu.org/software/grub/), and [ELILO](http://sourceforge.net/projects/elilo/)), since my main goal with MosquitOS is to write as much as possible from scratch, I decided to write my own bootloader.
 
  
 
